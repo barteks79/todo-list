@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f0f0;
+}
+body .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75vh;
+  background: #fff;
+  box-sizing: content-box;
+  padding: 25px 25px 50px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+body .wrapper h1 {
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+body .wrapper .buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 15px 0;
+}
+body .wrapper .buttons button,
+body .wrapper .buttons select {
+  padding: 12.5px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+body .wrapper .buttons button {
+  width: 15%;
+  font-size: 20px;
+  background-color: #8476ff;
+  border: 1px solid #8476ff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+body .wrapper .buttons button:hover,
+body .wrapper .buttons button:focus {
+  background-color: #6a59ff;
+}
+body .wrapper .buttons select {
+  border: 1px solid rgb(197, 197, 197);
+  width: 20%;
+  background-color: #fff;
+}
+body .wrapper .tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  padding: 25px 20px 0;
+  border-radius: 8px;
+  background-color: #dadada;
+}
+body .wrapper .tasks .no-tasks {
+  display: none;
+  font-size: 25px;
+  color: #ff3333;
+  text-transform: uppercase;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+body .wrapper .tasks .show-p {
+  display: block;
+}
+body .wrapper .tasks .task-box {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  margin-bottom: 25px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #fff;
+}
+body .wrapper .tasks .task-box .left .task-title {
+  font-weight: bold;
+}
+body .wrapper .tasks .task-box .left .completed {
+  text-decoration: line-through;
+  font-weight: lighter;
+  color: rgb(197, 197, 197);
+}
+body .wrapper .tasks .task-box .left .task-date {
+  font-weight: lighter;
+}
+body .wrapper .tasks .task-box .left p {
+  font-size: 18px;
+}
+body .wrapper .tasks .task-box .right {
+  display: flex;
+  align-items: center;
+}
+body .wrapper .tasks .task-box .right button {
+  font-size: 20px;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  margin: 0 7.5px;
+  border-radius: 5px;
+  background-color: #ececec;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+body .wrapper .tasks .task-box .right button i {
+  pointer-events: none;
+}
+body .wrapper .tasks .task-box .right button:hover,
+body .wrapper .tasks .task-box .right button:focus {
+  background-color: rgb(211, 211, 211);
+}
+body .wrapper .tasks .task-box .right .completed {
+  border: 1px solid #000;
+}
+body .wrapper .tasks .show-task {
+  display: flex;
+}
+body .modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body .modal .modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vh;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+body .modal .modal-wrapper h3 {
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+body .modal .modal-wrapper .fill-up-error {
+  display: none;
+  font-size: 22px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  color: #ff3333;
+}
+body .modal .modal-wrapper .show-error {
+  display: block;
+}
+body .modal .modal-wrapper .inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+body .modal .modal-wrapper .inputs label {
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 5px;
+}
+body .modal .modal-wrapper .inputs input {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 1px solid rgb(197, 197, 197);
+  align-self: center;
+  width: 50%;
+  margin-bottom: 15px;
+}
+body .modal .modal-wrapper .inputs .dates {
+  display: flex;
+  width: calc(50% + 20px);
+  align-self: center;
+}
+body .modal .modal-wrapper .inputs .dates input {
+  margin: 0 10px;
+}
+body .modal .modal-wrapper .buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  padding: 30px 0 15px;
+}
+body .modal .modal-wrapper .buttons button {
+  width: 45%;
+  padding: 10px;
+  background-color: #8476ff;
+  color: #fff;
+  font-size: 18px;
+  border: 1px solid #8476ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+body .modal .modal-wrapper .buttons button:hover,
+body .modal .modal-wrapper .buttons button:focus {
+  background-color: #6a59ff;
+}
+body .active {
+  display: flex;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/42da1ea016.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="add-modal modal">
+        <div class="modal-wrapper">
+            <h3>add task</h3>
+            <p class="fill-up-error">fill up all inputs!</p>
+            <div class="inputs">
+                <label>Task Name:</label>
+                <input type="text" placeholder="Enter task name">
+                <label>Task Deadline:</label>
+                <div class="dates">
+                    <input type="date" class="date">
+                    <input type="time" class="time">
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="confirm">Confirm</button>
+                <button class="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div class="edit-modal modal">
+        <div class="modal-wrapper">
+            <h3>edit task</h3>
+            <p class="fill-up-error">fill up all inputs!</p>
+            <div class="inputs">
+                <label>Task Name:</label>
+                <input type="text" placeholder="Enter task name">
+                <label>Task Deadline:</label>
+                <div class="dates">
+                    <input type="date" class="date">
+                    <input type="time" class="time">
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="confirm">Confirm</button>
+                <button class="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <h1>todo list</h1>
+        <div class="buttons">
+            <button class="add">Add</button>
+            <select id="deadline">
+                <option value="0" selected>All</option>
+                <option value="1">Today</option>
+                <option value="2">This week</option>
+                <option value="3">Completed</option>
+            </select>
+        </div>
+        <div class="tasks">
+            <p class="no-tasks show-p">no tasks to do!</p>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
